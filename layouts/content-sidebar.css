@@ -1,0 +1,21 @@
+/*
+Theme Name: um
+Layout: Content-Sidebar
+*/
+
+.site-side { float: right; width: 20%;  }
+.site-main { float: left; width: 75%;  }
+
+@media screen and (max-width: 800px) {
+	#secondary { display:table; width:100%; }
+	.site-side { width:100% }
+	.site-main { width:100% }
+	#secondary aside { float: left; width: 48%; margin:1%; }
+}
+
+@media screen and (max-width: 540px) {
+	body  { font-size: .9em; margin-top: 48px; }
+	.site-content .site-side { width:100% }
+	.site-content .site-main { width:100% }
+	#secondary aside { float: left; width: 98%; margin: 1%; }
+}
