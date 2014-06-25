@@ -14,17 +14,25 @@
 	if(! um_categorized_blog()){
 	// This blog only has 1 category so we just need to worry about tags in the meta text
 	if('' != $tag_list){
-		$meta_text = __('This entry was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'um');
+		$meta_text = __('<div><i class="umi-tag"></i><span class="text"> This entry was tagged</span> %2$s</div>'.
+						'<div><i class="umi-bookmark"></i><span class="text"> Bookmark the</span> <a href="%3$s" rel="bookmark">permalink</a></div>',
+						'um');
 	} else {
-		$meta_text = __('Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'um');
+		$meta_text = __('<div><i class="umi-bookmark"></i><span class="text"> Bookmark the</span> <a href="%3$s" rel="bookmark">permalink</a></div>', 
+						'um');
 	}
 
 	} else {
 	// But this blog has loads of categories so we should probably display them here
 	if('' != $tag_list){
-		$meta_text = __('This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'um');
+		$meta_text = __('<div><i class="umi-folder"></i><span class="text"> This entry was posted in</span> %1$s</div>'.
+						'<div><i class="umi-tag"></i><span class="text"> This entry was tagged</span> %2$s</div>'.
+						'<div><i class="umi-bookmark"></i><span class="text"> Bookmark the</span> <a href="%3$s" rel="bookmark">permalink</a></div>',
+						'um');
 	} else {
-		$meta_text = __('This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'um');
+		$meta_text = __('<div><i class="umi-folder"></i><span class="text"> This entry was posted in</span> %1$s</div>'.
+						'<div><i class="umi-bookmark"></i><span class="text"> Bookmark the</span> <a href="%3$s" rel="bookmark">permalink</a></div>', 
+						'um');
 	}
 
 	} // end check for categories on this blog
@@ -36,5 +44,5 @@
 	get_permalink()
 	);
 
-	edit_post_link(__('Edit', 'um'), '<span class="edit-link">', '</span>'); 
+	edit_post_link(__('Edit', 'um'), '<span class="edit-link"><i class="umi-edit"></i>', '</span>'); 
 ?></footer><!-- .entry-meta -->

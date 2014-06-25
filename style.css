@@ -16,6 +16,17 @@ https://github.com/tacoen/um-theme-core
 
 */
 
+body { font-family: "Open Sans",arial,helv,sans-serif; }
+body.adminbar { margin-top: 32px; }
+
+.micro { font-size: .8em; line-height: 1.25em; }
+.site-content,
+.inside { padding: 1%; }
+
+#comments { border-top-width: 1px; border-top-style: solid; margin-top: 2em; }
+h2.comments-title { font-size: 1.2em; }
+
+.widget-area aside { margin-bottom: 1em; }
 
 /* site-navigation */
 
@@ -25,28 +36,28 @@ https://github.com/tacoen/um-theme-core
 .menu-toggle i { color: rgba(255,255,255,.4)}
 
 .main-navigation a { padding-left: 8%; }
+
 /* navigation pointer */
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a { color: #ff0;}
 
+/* entry-meta */
 
-body { font-family: "Open Sans",arial,helv,sans-serif; }
+.entry-meta .text { display: none; }
+.entry-meta div { display: inline; }
 
-.widget-area aside { margin-bottom: 1em; }
-
-.micro { font-size: .8em; line-height: 1.25em; }
-.site-content,
-.inside { padding: 1%; }
+/* site-header */
 
 .site-branding { 
 	text-align: center; width: 100%; 
 	display:-webkit-box;
-	min-height: 200px;
+	min-height: 198px;
 	-webkit-box-pack:center;
 	-webkit-box-align:center;
 }
 
 .site-title { font-size: 2em; line-height:1; text-transform: uppercase; vertical-align:middle;}
+.site-title a { text-decoration: none; }
 .site-description { font-size: 1em; font-weight: 100}
 
 .site-footer { border-top: 1px solid #ccc; padding: 1em 0 3em 0; margin-top: 1em; }
@@ -54,6 +65,7 @@ body { font-family: "Open Sans",arial,helv,sans-serif; }
 #um-top { padding: 0; }
 #um-bottom nav, 
 #um-top nav { padding: 0 1% !important; }
+
 #um-crumbs { margin:0; width: 70%; float: left; padding: 1%; }
 #um-crumbs li:before { content: "\203A"; padding: 0 .5em 0 .5em; font-family: "umi-wp-font"; }
 #um-crumbs li:first-child:before { content: "\e640"; padding: 0 .5em 0 0; font-family: "umi-wp-font"; }
@@ -61,8 +73,6 @@ body { font-family: "Open Sans",arial,helv,sans-serif; }
 #um-site-search { width: 19%; float: right; margin-right: 1% }
 #um-site-search .search-submit { display:none; }
 #um-site-search .search-field { min-width: 100%; }
-
-body.admin-bar .site-header { margin-top: 32px; }
 
 #secondary { font-size: .9em; }
 

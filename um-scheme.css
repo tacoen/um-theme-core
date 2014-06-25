@@ -29,6 +29,8 @@
 	border-color: #95a5a6/*um-line*/ ; 
 }
 
+.entry-meta * { color: #95a5a6/*um-line*/ }
+
 body { 
 	background-color: #fcfcfc/*um-page*/ ; 
 	color: #5D6D7D/*um-text*/ ; 

@@ -13,7 +13,7 @@
 */
 var umvp_small = 540;
 var umvp_medium = 800;
-var window_height = $(window).innerHeight();
+var window_height = jQuery(window).innerHeight();
 
 (function($) {
 
@@ -24,10 +24,9 @@ $(document).ready(function(){
 
 });
 
-$(window).on('resize', function(){
-
-	um_content_height($('#content'), window_height );
+jQuery(window).on('resize', function(){
+	um_content_height( jQuery('#content') , window_height );
 	um_vpToBody();
 });
 
-})(jQuery);
+})( jQuery );

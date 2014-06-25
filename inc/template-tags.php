@@ -7,14 +7,6 @@
  * @package um
  */
 
-if ( ! function_exists( 'um_image_header' ) ) :
- 
-function um_image_header() {
-	if ( get_header_image() ) {?>style ="background:url('<?php header_image(); ?>') 0 0 no-repeat;width:<?php echo get_custom_header()->width; ?>px;height:<?php echo get_custom_header()->height; ?>px;"<?php  }
-}
- 
-endif;
- 
 if ( ! function_exists( 'um_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
@@ -90,15 +82,17 @@ function um_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'um' ),
-		sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
-			esc_url( get_permalink() ),
-			$time_string
-		),
-		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s">%2$s</a></span>',
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_html( get_the_author() )
-		)
+	printf( __( '<div class="posted-on"><i class="umi-calendar"></i><span class="text"> Posted on </span>%1$s</div>'.
+	            '<div><span class="byline"><i class="umi-user"></i><span class="text"> by</span> %2$s</span></div>', 
+				'um' ),
+				sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
+						esc_url( get_permalink() ),
+						$time_string
+				),
+				sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s">%2$s</a></span>',
+					esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+					esc_html( get_the_author() )
+				)
 	);
 }
 endif;

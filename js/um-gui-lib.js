@@ -1,3 +1,4 @@
+var $ =jQuery.noConflict();
 
 // Launch fullscreen for browsers that support it!
 // launchFullScreen(document.documentElement); // the whole page
@@ -99,7 +100,7 @@ function um_msg() {
 }
 
 function um_fx_init() {
-	um_content_height($('#content'), window_height );
+	um_content_height(jQuery('#content'), window_height );
 	um_msg();
 	um_vpToBody();
 	umi_navhover_click();
@@ -116,15 +117,15 @@ function um_fit_img(target) {
 function um_onscroll_fixed(target,dockto,adjustment) {
 	// Make target stop scoll at its dock position
 	var w = jQuery(window);
+	if (dockto.length > 0) { dockto = jQuery('#site-navigation'); }
 	if (target.length > 0) {
 		var offset = target.offset();
 		var top = offset.top; target.data('original-y',top);
-		var margin = top+adjustment;
+		var margin = top + adjustment;
 		var o_width = target.width();
 		if (dockto.length>0) {
-			var docktoY = dockto.outerHeight();
-		} else {
-			var docktoY = jQuery('#site-navigation').outerHeight();
+			var y = dockto.offset(); 
+			var docktoY = dockto.outerHeight() + y.top;
 		}
 		w.on( "scroll", function(e) {
 			var scroll = w.scrollTop();
