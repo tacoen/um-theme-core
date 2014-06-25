@@ -99,13 +99,6 @@ function um_msg() {
 	});
 }
 
-function um_fx_init() {
-	um_content_height(jQuery('#content'), window_height );
-	um_msg();
-	um_vpToBody();
-	umi_navhover_click();
-}
-
 function um_fit_img(target) {
 	// Make images fit it's ratio
 	target.each( function(e) {

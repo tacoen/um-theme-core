@@ -15,6 +15,14 @@ var umvp_small = 540;
 var umvp_medium = 800;
 var window_height = jQuery(window).innerHeight();
 
+
+function um_fx_init() {
+	um_content_height(jQuery('#content'), window_height );
+	um_msg();
+	um_vpToBody();
+	umi_navhover_click();
+}
+
 (function($) {
 
 $(document).ready(function(){
@@ -25,8 +33,9 @@ $(document).ready(function(){
 });
 
 jQuery(window).on('resize', function(){
-	um_content_height( jQuery('#content') , window_height );
-	um_vpToBody();
+	um_fx_init();
+	um_onscroll_fixed($('#um-top'),$('#site-navigation'),0);
+
 });
 
 })( jQuery );
