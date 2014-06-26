@@ -21,6 +21,8 @@ function um_fx_init() {
 	um_msg();
 	um_vpToBody();
 	umi_navhover_click();
+	$('#um-top').click( function(e) { jQuery(window).scrollTop(0); } )
+	
 }
 
 (function($) {

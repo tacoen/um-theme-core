@@ -44,5 +44,5 @@
 	get_permalink()
 	);
 
-	edit_post_link(__('Edit', 'um'), '<span class="edit-link"><i class="umi-edit"></i>', '</span>'); 
+	edit_post_link(__('Edit', 'um'), '<div class="edit-link"><i class="umi-edit"></i>', '</div>'); 
 ?></footer><!-- .entry-meta -->

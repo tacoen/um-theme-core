@@ -24,7 +24,9 @@ body.adminbar { margin-top: 32px; }
 .inside { padding: 1%; }
 
 #comments { border-top-width: 1px; border-top-style: solid; margin-top: 2em; }
+h3.reply-title,
 h2.comments-title { font-size: 1.2em; }
+.form-allowed-tags { font-size: .85em; line-height: 1.1; margin-top: 0}
 
 .widget-area aside { margin-bottom: 1em; }
 
@@ -62,9 +64,7 @@ h2.comments-title { font-size: 1.2em; }
 
 .site-footer { border-top: 1px solid #ccc; padding: 1em 0 3em 0; margin-top: 1em; }
 
-#um-top { padding: 0; }
-#um-bottom nav, 
-#um-top nav { padding: 0 1% !important; }
+#um-top { padding: 0; background: rgba(0,0,0,.6)}
 
 #um-crumbs { margin:0; width: 70%; float: left; padding: 1%; }
 #um-crumbs li:before { content: "\203A"; padding: 0 .5em 0 .5em; font-family: "umi-wp-font"; }

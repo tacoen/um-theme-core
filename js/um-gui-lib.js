@@ -110,20 +110,23 @@ function um_fit_img(target) {
 function um_onscroll_fixed(target,dockto,adjustment) {
 	// Make target stop scoll at its dock position
 	var w = jQuery(window);
-	if (dockto.length > 0) { dockto = jQuery('#site-navigation'); }
+	w.scrollTop(0);
+	
+	if (dockto.length <= 0) { dockto = jQuery('#site-navigation');  }
+
+	var y = dockto.offset(); 
+	var docktoY = dockto.outerHeight() + y.top;
+	var fix = adjustment+docktoY;
+
 	if (target.length > 0) {
 		var offset = target.offset();
 		var top = offset.top; target.data('original-y',top);
-		var margin = top + adjustment;
+		var margin = top + adjustment -30;
 		var o_width = target.width();
-		if (dockto.length>0) {
-			var y = dockto.offset(); 
-			var docktoY = dockto.outerHeight() + y.top;
-		}
+
 		w.on( "scroll", function(e) {
 			var scroll = w.scrollTop();
-			if (scroll > margin) { 
-				var fix = adjustment+docktoY;
+			if (scroll >= margin) { 
 				target.css('position','fixed'); 
 				target.css('top',fix+"px"); 
 				target.css('z-index',9900);
