@@ -26,7 +26,6 @@
 	</div>
 </div><!-- site-branding -->
 <div id="um-top">
-	<?php/* umtag('searchbox'); */?>
 	<?php umtag('breadcrumb');?>
 </div>
 </header><!-- #masthead -->
