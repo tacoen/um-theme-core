@@ -11,8 +11,7 @@
 	um_toc($('div.maketoc'),'h4',"Table of Contents")
 
 */
-var umvp_small = 540;
-var umvp_medium = 800;
+
 var window_height = jQuery(window).innerHeight();
 
 
