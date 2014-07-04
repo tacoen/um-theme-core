@@ -14,7 +14,8 @@ add_action('admin_head', 'save_um_custom_options');
 function um_custom_image_options() {
 
 	$overlay = esc_attr( get_theme_mod( 'header_overlay','none') );
-	?><h3>Header image Options</h3>
+	?><p><strong>Note:</strong> Header Image will affect for the element with class "um-headimg"</p>
+	<h3>Header image Options</h3>
 	<table class="form-table">
 	<tbody>
 	<tr valign="top" class="hide-if-no-js">

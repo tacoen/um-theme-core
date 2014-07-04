@@ -8,40 +8,39 @@ body  { margin-top: 32px; }
 .site-side { width:100% }
 .site-main { width:100% }
 #secondary aside { float: left; width: 98%; margin: 1%; }
-
+http://wp.local.net/
 /* base.css */
+
+.micro { font-size: .7em; }
 
 .comment-list { padding-left: 0 }
 .comment-list li { list-style-type: none; }
 .form-allowed-tags { display: none; }
 
+
 body.admin-bar .main-navigation  {
 	position: absolute; top: 46px; /* wp-admin-bar fixed */
 }
-
 
 /* um-gui-lib */
 
 .col2 div,
 .col2 div.last { 
+
 	width: 100%; margin: 0; float: left; 
+
 }
-	 
+
 .col3 div,
 .col3 div.last { 
 	width: 100%; margin-right: 0; float: left; 
 }
-	 
+
 .col5 div,
 .col4 div { width: 48%; margin-right: 2%; float: left; }
 .col5 div.last,
 .col4 div.last { width: 50%; margin-right: 0 }
-
 #um-top { line-height: 24px; height: 48px; padding: 8px; }
-
-/* for small device tweaks */
-
 .um-desktop,
 .um-medium { display: none; }
-
 div.right { text-align: left; }

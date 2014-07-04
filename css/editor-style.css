@@ -3,4 +3,4 @@
 editor-styles.css
 
 */
-textarea { font:.9375em Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace; }
+#template textarea { font:.9375em Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace; line-height: 1.3em; }

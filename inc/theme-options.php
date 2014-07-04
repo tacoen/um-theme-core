@@ -54,7 +54,7 @@ function um_add_field($id,$title,$type,$callback,$default='',$desc='',$range=arr
 		));
 }
 
-function umcto_display_section($section){ echo "<p>Changing Theme Options may require some adjustment on your theme.</p>"; }
+function umcto_display_section($section){ echo "<hr/>"; }
 
 function umcto_display_setting($args) {
     extract( $args );
@@ -62,13 +62,16 @@ function umcto_display_setting($args) {
     $options = get_option( $option_name ); 
 	if (!empty($options[$id])) { $options[$id] = esc_attr( stripslashes( $options[$id] ) );  } else { $options[$id] = $default; }
 	
+	// default, cause html5 build with validations
+	// http://www.the-art-of-web.com/html/html5-form-validation/	
+	
     switch ( $type ) {  
           case 'text':  
               echo "<input class='$class' type='text' id='$id' name='" . $option_name . "[$id]' value='$options[$id]' size='60'/>";  
               echo ($desc != '') ? "<br /><span class='description'>$desc</span>" : "";  
           break;
           case 'number':  
-              echo "<input class='$class' type='number' id='$id' name='" . $option_name . "[$id]' value='$options[$id]' size='6'/>";  
+              echo "<input class='$class' type='number' id='$id' name='" . $option_name . "[$id]' min='0' value='$options[$id]' size='4'/>";  
               echo ($desc != '') ? "<br /><span class='description'>$desc</span>" : "";  
           break;
           case 'textarea':  
@@ -89,6 +92,8 @@ function umcto_display_setting($args) {
 }
 
 function um_child_validate_settings($input) {
+	print_r($input);
+	die();
 	foreach($input as $k => $v)   {
 		$newinput[$k] = trim($v);
 		//if(!preg_match('/^[A-Z0-9 _]*$/i', $v)) { $newinput[$k] = ''; //}
@@ -98,20 +103,25 @@ function um_child_validate_settings($input) {
 }
 
 function um_child_theme_menu() {
-	$nice_name = ucfirst(get_stylesheet());
+	if (strlen(get_stylesheet())>3) { $nice_name = ucfirst(get_stylesheet()); } else { $nice_name = strtoupper(get_stylesheet()); }
 	add_theme_page( 'Theme Option',  $nice_name .' Options', 'manage_options', 'umcto.php', 'um_child_theme_page');  
 }
 
 add_action('admin_menu', 'um_child_theme_menu');
 
 function um_child_theme_page() {
-	$nice_name = ucfirst(get_stylesheet());?>
-	<div class="section panel">
+	if (strlen(get_stylesheet())>3) { $nice_name = ucfirst(get_stylesheet()); } else { $nice_name = strtoupper(get_stylesheet()); } ?>
+	<div class="wrap">
+	<div class="um-header">
 	<h2><?php echo $nice_name ?> - Theme Options</h2>
-	<form method="post" enctype="multipart/form-data" action="options.php"><?php  
+	</div>
+	<form method="post" enctype="multipart/form-data" action="options.php" class="umplugs">
+	<div><?php  
 	settings_fields('umcto'); 
 	do_settings_sections('umcto.php');
-	?><p class="submit"><input type="submit" class="button-primary" value="<?php _e('Save Changes','um') ?>" /></p>  
+	?></div>
+	<hr/>
+	<p class="submit"><input type="submit" class="button-primary" value="<?php _e('Save Changes','um') ?>" /></p>  
 	</form>
 	</div><?php 
 }
