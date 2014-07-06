@@ -71,5 +71,5 @@ function um_category_transient_flusher() {
 }
 
 add_action( 'edit_category', 'um_category_transient_flusher' );
-add_action( 'save_post',     'um_category_transient_flusher' );
+add_action( 'save_post', 'um_category_transient_flusher' );
 

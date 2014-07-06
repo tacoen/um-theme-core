@@ -35,7 +35,7 @@ function save_um_custom_options() {
 
 	if ( ( isset( $_POST['header_overlay'] ) ) && ( current_user_can('manage_options') ) ) {
 		check_admin_referer( 'custom-header-options', '_wpnonce-custom-header-options' );
-		set_theme_mod( 'header_overlay', $_POST['header_overlay'] );  
+		set_theme_mod( 'header_overlay', $_POST['header_overlay'] ); 
 	}
 
 	return;
@@ -47,15 +47,15 @@ function um_custom_header_setup() {
 	if ( get_umcto('header_height')!=false ) { $umchiH = get_umcto('header_height'); } else { $umchiH = "250"; }
 	
 	add_theme_support( 'custom-header', apply_filters( 'um_custom_header_args', array(
-		'default-image'          => '',
-		'header-text'            => false,
-		'default-text-color'     => '000000',
-		'width'                  => $umchiW,
-		'height'                 => $umchiH,
-		'flex-height'            => false,
-		'flex-width'             => true,		
-		'wp-head-callback'       => 'um_header_style',
-		'admin-head-callback'    => 'um_admin_header_style',
+		'default-image' => '',
+		'header-text' => false,
+		'default-text-color' => '000000',
+		'width' => $umchiW,
+		'height' => $umchiH,
+		'flex-height' => false,
+		'flex-width' => true,		
+		'wp-head-callback' => 'um_header_style',
+		'admin-head-callback' => 'um_admin_header_style',
 		'admin-preview-callback' => 'um_admin_header_image',
 	) ) );
 }
@@ -127,9 +127,9 @@ if ( ! function_exists( 'um_admin_header_image' ) ) :
  *
  * @see um_custom_header_setup().
  */
-function um_admin_header_image() {
 
-}
+ function um_admin_header_image() {}
+
 endif; // um_admin_header_image
 
 add_action('wp_head','um_header_style');

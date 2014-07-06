@@ -46,7 +46,7 @@ if ( ! function_exists( 'um_post_nav' ) ) :
 function um_post_nav() {
 	// Don't print empty markup if there's nowhere to navigate.
 	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-	$next     = get_adjacent_post( false, '', false );
+	$next = get_adjacent_post( false, '', false );
 
 	if ( ! $next && ! $previous ) {
 		return;
@@ -57,7 +57,7 @@ function um_post_nav() {
 		<div class="nav-links">
 			<?php
 				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'um' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'um' ) );
+				next_post_link( '<div class="nav-next">%link</div>', _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link', 'um' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
@@ -83,7 +83,7 @@ function um_posted_on() {
 	);
 
 	printf( __( '<div class="posted-on"><i class="umi-calendar"></i><span class="text"> Posted on </span>%1$s</div>'.
-	            '<div><span class="byline"><i class="umi-user"></i><span class="text"> by</span> %2$s</span></div>', 
+	 '<div><span class="byline"><i class="umi-user"></i><span class="text"> by</span> %2$s</span></div>', 
 				'um' ),
 				sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 						esc_url( get_permalink() ),

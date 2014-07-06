@@ -20,7 +20,6 @@ function launchFullScreen(element) {
 function um_vpToBody() {
 	if (umgui_var['small'].length <= 0) { var umvp_small = 540; } else { var umvp_small = umgui_var['small']; }
 	if (umgui_var['medium'].length <= 0) { var umvp_medium = 800; } else { var umvp_medium = umgui_var['medium']; }
-	console.log(umvp_medium);
 	var w = $(window).width();
 	var $class='';
 	$('body').removeClass('vp_medium');

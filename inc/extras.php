@@ -15,7 +15,7 @@ function um_wp_title( $title, $sep=":" ) {
 	$suf_title = get_bloginfo( 'name', 'display' );
 
 	if ( is_feed() ) { return $suf_title.$title; }
-	if ( is_404() )  { return $suf_title.$title; }
+	if ( is_404() ) { return $suf_title.$title; }
 	if ( is_archive() ) { return $suf_title." $sep Archive".$title; }
 
 	global $page, $paged;

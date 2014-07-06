@@ -13,7 +13,7 @@
 function um_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'footer'    => 'page',
+		'footer' => 'page',
 	) );
 }
 add_action( 'after_setup_theme', 'um_jetpack_setup' );
