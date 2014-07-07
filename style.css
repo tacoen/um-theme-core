@@ -14,12 +14,14 @@ UM, Copyright 2014 tacoen and distributed under the terms of the GNU GPL
 
 */
 
-body { font-family: "Open Sans",arial,helv,sans-serif; }
+html body { font-family: "Open Sans",arial,helv,sans-serif; }
 body.adminbar { margin-top: 32px; }
 
 .micro { font-size: .8em; line-height: 1.25em; }
+
 #content,
 .inside { padding: 1%; }
+inside { width: 98%; }
 
 #comments { border-top-width: 1px; border-top-style: solid; margin-top: 2em; }
 h3.reply-title,
@@ -55,12 +57,18 @@ font-size: .9em;
 
 /* site-header */
 
+.site-header { margin-bottom: 1.5em; }
+
 .site-branding { 
+	padding-top: 38px; 
 	text-align: center; width: 100%; 
-	display:-webkit-box;
 	min-height: 198px;
-	-webkit-box-pack:center;
-	-webkit-box-align:center;
+
+	/* http://philipwalton.github.io/solved-by-flexbox/ */
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .site-title { font-size: 2em; line-height:1; text-transform: uppercase; vertical-align:middle;}
@@ -81,4 +89,10 @@ font-size: .9em;
 
 #secondary { font-size: .9em; }
 
+body.single .entry-title,
+.page-title,
+body.page .entry-title {font-size: 2em; margin: 0; text-decoration:none; text-transform: capitalize;
+border-bottom-width: 1px; border-bottom-style: solid; }
+
+body.search article { margin: 1em 0; }
 

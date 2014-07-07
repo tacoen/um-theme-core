@@ -190,6 +190,7 @@ function get_elementColor(id,what) {
 
 function um_getrgbof(id,what,alpha) {
 	var rgb = get_elementColor(id,what);
+	console.log(rgb);
 	var a = "rgba("+rgb['r']+","+rgb['g']+","+rgb['b']+","+alpha+")";
 	return a;
 }

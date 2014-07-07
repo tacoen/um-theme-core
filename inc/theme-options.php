@@ -33,7 +33,7 @@ function um_child_register_settings() {
 }
 
 function um_add_field($id,$title,$type,$callback,$default='',$desc='',$range=array()) {
-	$hint = "<i class='dashicons dashicons-editor-code' title='get_umcto(\"$id\")' style='float:right; opacity: .5'></i>";
+	$hint = "<br/><code>$id</code>";
 	add_settings_field( 
 		$id, 
 		$title.$hint, 
@@ -48,7 +48,7 @@ function um_add_field($id,$title,$type,$callback,$default='',$desc='',$range=arr
 			'default' => $default,
 			'label_for' => $id.'_label',
 			'class' => $id.'_class',
-			'range'		=> $range,
+			'range' => $range,
 		));
 }
 
@@ -97,7 +97,7 @@ function umcto_display_setting($args) {
 
 function um_child_validate_settings($input) {
 	foreach($input as $k => $v) {
-		$newinput[$k] = trim($v);
+		$newinput[$k] = sanitize_text_field($v);
 		//if(!preg_match('/^[A-Z0-9 _]*$/i', $v)) { $newinput[$k] = ''; //}
 	}
 	return $newinput;
@@ -113,7 +113,7 @@ function um_themename() {
 }
 
 function um_child_theme_menu() {
-	add_theme_page( 'Theme Option', um_themename() .' Options', 'manage_options', 'umcto.php', 'um_child_theme_page'); 
+	add_theme_page( 'Theme Option', um_themename() .' Options', 'edit_themes', 'umcto.php', 'um_child_theme_page'); 
 }
 
 add_action('admin_menu', 'um_child_theme_menu');
@@ -129,7 +129,7 @@ function um_child_theme_page() {?>
 	do_settings_sections('umcto.php');
 	?></div>
 	<hr/>
-	<p class="submit"><input type="submit" class="button-primary" value="<?php _e('Save Changes','um') ?>" /></p> 
+	<p class="submit"><input type="submit" class="button-primary" value="<?php _e('Updates','um') ?>" /></p> 
 	</form>
 	</div><?php 
 }
