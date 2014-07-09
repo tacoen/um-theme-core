@@ -14,85 +14,189 @@ UM, Copyright 2014 tacoen and distributed under the terms of the GNU GPL
 
 */
 
-html body { font-family: "Open Sans",arial,helv,sans-serif; }
-body.adminbar { margin-top: 32px; }
+body {
+	font-family: "Open Sans",arial,helv,sans-serif;
+	}
 
-.micro { font-size: .8em; line-height: 1.25em; }
+body.adminbar {
+	margin-top: 32px;
+	}
+
+body.search article {
+	margin: 1em 0;
+	}
+
+.page-title,
+body.page .entry-title,
+body.single .entry-title {
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	font-size: 2em;
+	margin: 0;
+	text-decoration: none;
+	text-transform: capitalize;
+	}
+
+#comments {
+	border-top-style: solid;
+	border-top-width: 1px;
+	margin-top: 2em;
+	}
 
 #content,
-.inside { padding: 1%; }
-inside { width: 98%; }
+.inside {
+	padding: 1%;
+	}
 
-#comments { border-top-width: 1px; border-top-style: solid; margin-top: 2em; }
-h3.reply-title,
-h2.comments-title { font-size: 1.2em; }
-.form-allowed-tags { font-size: .85em; line-height: 1.1; margin-top: 0}
+#secondary {
+	font-size: .9em;
+	}
 
-.widget-area aside { margin-bottom: 2em; border-radius: 5px; }
-.widget-area h1 { font-weight:100; font-size: 1.2em; padding: .25em .5em; 
--webkit-border-radius: 5px 5px 0 0; border-radius: 5px 5px 0 0;}
-.widget-area aside > ul { padding: .5em; 
--webkit-border-radius: 0 0 5px 5px;
-border-radius: 0 0 5px 5px;
-font-size: .9em;
-}
+#um-top {
+	background: rgba(0,0,0,.6);
+	padding: 0;
+	}
 
-/* site-navigation */
+#um-crumbs li:before {
+	content: "\203A";
+	font-family: "umi-wp-font";
+	padding: 0 .5em 0 .5em;
+	}
 
-.menu-toggle { background: rgba(0,0,0,0.06); }
-.menu-toggle i { border-color: rgba(255,255,255,.4); }
-.menu-toggle span { color: rgba(255,255,255,.4) }
-.menu-toggle i { color: rgba(255,255,255,.4)}
+#um-crumbs li:first-child:before {
+	content: "\e640";
+	font-family: "umi-wp-font";
+	padding: 0 .5em 0 0;
+	}
 
-.main-navigation a { padding-left: 8%; }
+#um-crumbs {
+	float: left;
+	margin: 0;
+	padding: 1%;
+	width: 70%;
+	}
 
-/* navigation pointer */
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a { color: #ff0;}
+#um-site-search .search-field {
+	min-width: 100%;
+	}
 
-/* entry-meta */
+#um-site-search .search-submit {
+	display: none;
+	}
 
-.entry-meta .text { display: none; }
-.entry-meta div { display: inline; }
+#um-site-search {
+	float: right;
+	margin-right: 1%;
+	width: 19%;
+	}
 
-/* site-header */
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_item > a {
+	color: #ff0;
+	}
 
-.site-header { margin-bottom: 1.5em; }
+.main-navigation a {
+	padding-left: 8%;
+	}
 
-.site-branding { 
-	padding-top: 38px; 
-	text-align: center; width: 100%; 
-	min-height: 198px;
+.menu-toggle i {
+	border-color: rgba(255,255,255,.4);
+	}
 
-	/* http://philipwalton.github.io/solved-by-flexbox/ */
+.menu-toggle i {
+	color: rgba(255,255,255,.4);
+	}
 
-	display: flex;
+.menu-toggle span {
+	color: rgba(255,255,255,.4);
+	}
+
+.menu-toggle {
+	background: rgba(0,0,0,.06);
+	}
+
+.entry-meta .text {
+	display: none;
+	}
+
+.entry-meta div {
+	display: inline;
+	}
+
+.form-allowed-tags {
+	font-size: .85em;
+	line-height: 1.1;
+	margin-top: 0;
+	}
+
+.micro {
+	font-size: .8em;
+	line-height: 1.25em;
+	}
+
+.site-branding {
 	align-items: center;
+	display: flex;
 	justify-content: center;
-}
+	min-height: 198px;
+	padding-top: 38px;
+	text-align: center;
+	width: 100%;
+	}
 
-.site-title { font-size: 2em; line-height:1; text-transform: uppercase; vertical-align:middle;}
-.site-title a { text-decoration: none; }
-.site-description { font-size: 1em; font-weight: 100}
+.site-description {
+	font-size: 1em;
+	font-weight: 100;
+	}
 
-.site-footer { border-top: 1px solid #ccc; padding: 1em 0 3em 0; margin-top: 1em; }
+.site-footer {
+	border-top: 1px solid #ccc;
+	margin-top: 1em;
+	padding: 1em 0 3em 0;
+	}
 
-#um-top { padding: 0; background: rgba(0,0,0,.6)}
+.site-header {
+	margin-bottom: 1.5em;
+	}
 
-#um-crumbs { margin:0; width: 70%; float: left; padding: 1%; }
-#um-crumbs li:before { content: "\203A"; padding: 0 .5em 0 .5em; font-family: "umi-wp-font"; }
-#um-crumbs li:first-child:before { content: "\e640"; padding: 0 .5em 0 0; font-family: "umi-wp-font"; }
+.site-title a {
+	text-decoration: none;
+	}
 
-#um-site-search { width: 19%; float: right; margin-right: 1% }
-#um-site-search .search-submit { display:none; }
-#um-site-search .search-field { min-width: 100%; }
+.site-title {
+	font-size: 2em;
+	line-height: 1;
+	text-transform: uppercase;
+	vertical-align: middle;
+	text-shadow: 1px 0 4px rgba(0,0,0,.08);
+	}
 
-#secondary { font-size: .9em; }
 
-body.single .entry-title,
-.page-title,
-body.page .entry-title {font-size: 2em; margin: 0; text-decoration:none; text-transform: capitalize;
-border-bottom-width: 1px; border-bottom-style: solid; }
+.widget-area aside > ul {
+	-webkit-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+	font-size: .9em;
+	padding: .5em;
+	}
 
-body.search article { margin: 1em 0; }
+.widget-area aside {
+	border-radius: 5px;
+	margin-bottom: 2em;
+	}
 
+.widget-area h1 {
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	font-size: 1.2em;
+	font-weight: 700;
+	padding: .25em .5em;
+	}
+
+h2.comments-title,
+h3.reply-title {
+	font-size: 1em;
+	}
+
+inside {
+	width: 98%;
+	}

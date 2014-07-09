@@ -516,9 +516,8 @@ body.search .page:after {
 	clear: both;
 	}
 
-body.search .page {
-	border: 1px solid rgba(0,0,0,.5);
-	padding: 1%;
+body.search .page  .entry-title a {
+	color: #f00;
 	}
 
 body {
