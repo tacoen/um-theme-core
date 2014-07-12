@@ -3,39 +3,17 @@
  *
  * ------------------------------------------------------------------------ */
  
-#um-bottom,
-#um-top {
-	clear: both;
-	margin: 0;
-	padding: 0;
-	}
-
 #um-bottom:after,
-#um-top:after,
-.comment-content:after,
-.entry-content:after,
-.site-content:after,
-.site-footer:after,
-.site-header:after {
+#um-top:after{
 	clear: both;
 	}
 
 #um-bottom:before,
-#um-top:before,
-.comment-content:after,
-.comment-content:before,
-.entry-content:after,
-.entry-content:before,
-.site-content:after,
-.site-content:before,
-.site-footer:after,
-.site-footer:before,
-.site-header:after,
-.site-header:before {
-	content: '';
-	display: table;
+#um-top:before{
+	clear: both;
 	}
 
+	
 /* Off canvas */
 
 
@@ -509,3 +487,12 @@ div.um_login_div a {
 	background-size: 100% 100%;
 	background-size: cover;
 	}
+
+.navh_added  { font-size: .85em; background: rgba(255,255,255,.05); }
+.navh_added i { padding-right: 1em; }
+
+.docked {
+-webkit-box-shadow: 0 8px 8px 8px rgba(0,0,0,.5);
+box-shadow: 0 8px 8px 8px rgba(0,0,0,.5);
+}
+

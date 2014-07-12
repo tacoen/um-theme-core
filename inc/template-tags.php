@@ -82,8 +82,8 @@ function um_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( __( '<div class="posted-on"><i class="umi-calendar"></i><span class="text"> Posted on </span>%1$s</div>'.
-	 '<div><span class="byline"><i class="umi-user"></i><span class="text"> by</span> %2$s</span></div>', 
+	printf( __( '<div class="posted-on"><i class="umi-calendar"></i><span class="sr-text"> Posted on </span>%1$s</div>'.
+	 '<div><span class="byline"><i class="umi-user"></i><span class="sr-text"> by</span> %2$s</span></div>', 
 				'um' ),
 				sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 						esc_url( get_permalink() ),

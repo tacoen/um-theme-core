@@ -12,7 +12,7 @@
 				$categories_list = get_the_category_list(__(', ', 'um'));
 				if($categories_list && um_categorized_blog()):?>
 					<div class="cat-links"><i class="umi-folder"></i>
-					<?php printf(__('<span class="text">Posted in</span> %1$s', 'um'), $categories_list); ?>
+					<?php printf(__('<span class="sr-text">Posted in</span> %1$s', 'um'), $categories_list); ?>
 					</div>
 				<?php endif; // End if categories ?>
 
@@ -21,7 +21,7 @@
 				$tags_list = get_the_tag_list('', __(', ', 'um'));
 				if($tags_list):?>
 					<div class="tags-links"><i class="umi-tag"></i>
-					<?php printf(__('<span class="text">Tagged</span> %1$s', 'um'), $tags_list); ?>
+					<?php printf(__('<span class="sr-text">Tagged</span> %1$s', 'um'), $tags_list); ?>
 					</div>
 				<?php endif; // End if $tags_list ?>
 		
