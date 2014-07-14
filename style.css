@@ -18,10 +18,6 @@ body {
 	font-family: "Open Sans",arial,helv,sans-serif;
 	}
 
-body.adminbar {
-	margin-top: 32px;
-	}
-	
 body.search article {
 	margin: 1em 0;
 	}

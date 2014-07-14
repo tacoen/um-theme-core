@@ -132,7 +132,7 @@ function um_onscroll_fixed(target,dockto,adjustment) {
 				target.css('position','fixed'); 
 				target.css('top',fix+"px"); 
 				target.css('z-index',9900);
-				target.css('width',o_width);
+				target.css('width','100%');
 				target.addClass('docked')
 			} else {
 				target.css('position','static');

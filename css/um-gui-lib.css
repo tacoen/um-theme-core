@@ -1,498 +1,152 @@
-/*
- * UM-GUI Styles and FX
- *
- * ------------------------------------------------------------------------ */
+/* umi-webfonts tweaks
+ * -----------------------------------------------------------------------------
+ */
+
+[class*=" umi-"]:before,[class^="umi-"]:before{display:inline-block;padding:.25rem;text-decoration:none;vertical-align:top}
+.square-umi{min-height:16px;min-width:16px}
+
+/* tools and kits
+ * -----------------------------------------------------------------------------
+ */
  
-#um-bottom:after,
-#um-top:after{
-	clear: both;
-	}
-
-#um-bottom:before,
-#um-top:before{
-	clear: both;
-	}
-
-	
-/* Off canvas */
-
-
-.um-dark-overlay {
-	background-color: rgba(0,0,0,.9);
-	height: 100%;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 990;
-	}
-
-.um-overlay-fx {
-	color: #fff;
-	font-size: 1.5em;
-	}
-
-.um-off-canvas-left {
-	left: -24.75%;
-	position: fixed;
-	top: 0;
-	width: 25%;
-	}
-
-.pined-left,
-.um-off-canvas-left:hover {
-	left: 0;
-	position: fixed;
-	top: 0;
-	width: 25%;
-	}
-
-.canvas-adjust-left {
-	-webkit-transition: .5s;
-	margin-left: 26%  !important;
-	overflow: hidden;
-	transition: .5s;
-	}
-
-.um-off-canvas-right {
-	left: 99%;
-	position: fixed;
-	top: 0;
-	width: 25%;
-	}
-
-.pined-right,
-.um-off-canvas-right:hover {
-	left: 100%;
-	margin-left: -25%;
-	position: fixed;
-	top: 0;
-	width: 25%;
-	}
-
-.canvas-adjust-right {
-	-webkit-transition: .5s;
-	overflow: hidden;
-	transition: .5s;
-	}
-
-/* Ajax um-login */
-
-div.um_login_div {
-	background: #333;
-	height: 24px;
-	left: 100%;
-	line-height: 24px;
-	margin-left: -100px;
-	margin-top: -25px;
-	position: fixed;
-	text-align: center;
-	top: 100%;
-	width: 80px;
-	z-index: 991;
-	}
-
-div.um_login_div a {
-	color: #fff;
-	display: block;
-	font-size: 12px;
-	height: 24px;
-	line-height: 24px;
-	text-decoration: none;
-	}
-
-#um-login {
-	background-color: #FFFFFF;
-	display: none;
-	font-size: .9em;
-	left: 50%;
-	margin-left: -200px;
-	padding: 10px;
-	position: fixed;
-	top: 180px;
-	width: 350px;
-	z-index: 999;
-	}
-
-#um-login p {
-	margin-bottom: 1em;
-	}
-
-#um-login p.submit {
-	text-align: right;
-	}
-
-#um-login p.submit.label {
-	float: left;
-	}
-
-#um-login p.status {
-	display: none;
-	font-size: .9em;
-	}
-
-#um-login h1 {
-	font-size: 1.5em;
-	font-weight: 700;
-	margin-bottom: 1.5em;
-	}
-
-#um-login p label {
-	display: block;
-	}
-
-#um-login input[type=password],
-#um-login input[type=text] {
-	width: 98%;
-	}
-
-#um-login a.um-badge {
-	-webkit-box-shadow: inset 0 1px 1px 1px rgba(255,255,255,.2);
-	background: #111;
-	box-shadow: inset 0 1px 1px 1px rgba(255,255,255,.2);
-	color: #ddd;
-	display: block;
-	display: inline-block;
-	font-size: .75em;
-	opacity: 1  !important;
-	text-align: center;
-	text-decoration: none;
-	text-transform: lowercase;
-	}
-
-#um-login a.um-badge:hover {
-	color: #fff;
-	text-decoration: none  !important;
-	}
-
-	
-/* Tabs */
-
-#um_tab {
-	border-bottom: 1px solid #ccc;
-	display: table;
-	line-height: 1.3rem;
-	padding-left: 1%;
-	width: 99%;
-	}
-
-#um_tab li {
-	border-bottom: none;
-	border: 1px solid #ccc;
-	float: left;
-	line-height: 30px;
-	list-style-type: none;
-	margin-bottom: 0;
-	margin-right: 2px;
-	min-width: 120px;
-	}
-
-#um_tab li a {
-	background: #eee;
-	color: #333;
-	display: block;
-	padding: 0;
-	text-align: center;
-	text-decoration: none  !important;
-	}
-
-#um_tab li a:hover {
-	background: #f0f0f0;
-	color: #111;
-	}
-
-#um_tab li a.active {
-	background: #fff;
-	color: #111;
-	}
-
-.um_tab_content {
-	background: #fff;
-	border-top: none;
-	border: 1px solid #ccc;
-	margin: 0;
-	padding: .5em;
-	}
-
-.um_tab_content.hide {
-	display: none;
-	}
-
-/* TOC */
-
-.um_toc {
-	background: #fff;
-	border: 1px solid #ccc;
-	color: #999;
-	float: right;
-	width: 300px;
-	}
-
-.um_toc h5 {
-	border-bottom: 1px solid #ccc;
-	color: #999;
-	margin: 0;
-	margin: 0 0 .5em;
-	padding: .5em;
-	}
-
-.um_toc ol {
-	font-size: .8em;
-	line-height: 1.5em;
-	margin-left: 1.5em;
-	padding: .5em .5em 2em .5em;
-	}
-
-.um_toc a {
-	color: #333;
-	text-decoration: none;
-	}
-
-/* Tools */
-
-.box {
-	border-style: solid;
-	border-width: 1px;
-	}
-
-.rounded {
-	border-radius: 5px;
-	}
-
-.small {
-	font-size: .8em;
-	line-height: 1.2em;
-	}
-
-.rounded.inside {
-	padding: 8px;
-	}
-
-.border-box {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	}
-
-/* Webfont Tweaks */
-
-[class*=" umi-"]:before,
-[class^="umi-"]:before {
-	display: inline-block;
-	padding: .25rem;
-	text-decoration: none;
-	vertical-align: top;
-	}
-
-#umi-fontest div {
-	float: left;
-	margin: 0 2% 1em 0;
-	width: 31%;
-	}
-
-#umi-fontest div code {
-	float: right;
-	}
-
-/* Msg Prompts */
-
-.square-umi {
-	min-height: 16px;
-	min-width: 16px;
-	}
-
-.um-msg {
-	border-radius: 3px;
-	color: #fff;
-	cursor: pointer;
-	font-size: .8em;
-	margin-bottom: .5em;
-	padding: .5% 1%;
-	width: 96%;
-	}
-
-.um-msg [class*=" umi-"]:before,
-.um-msg [class^="umi-"]:before {
-	float: right;
-	}
-
-/* breadcrumbs */
-
-#um-crumbs li {
-	float: left;
-	list-style-type: none;
-	}
-
-#um-crumbs li:before {
-	content: "\203A";
-	padding: 0 .5em 0 .5em;
-	}
-
-#um-crumbs li:first-child:before {
-	content: "\e640";
-	padding: 0 0;
-	}
-
-/* Layouts Grids */
-
-.row:after,
-.row:before {
-	content: "";
-	display: table;
-	}
-
-.row:after {
-	clear: both;
-	}
-
-.full-width {
-	width: 100%;
-	}
-
-.full {
-	text-align: center;
-	width: 100%;
-	}
-
-.col2>div {
-	float: left;
-	margin-right: 2%;
-	width: 48%;
-	}
-
-.col2>div.last {
-	margin-right: 0;
-	width: 50%;
-	}
-
-.col3>div {
-	float: left;
-	margin-right: 1%;
-	width: 32%;
-	}
-
-.col3>div.last {
-	margin-right: 0;
-	width: 33%;
-	}
-
-.col4>div {
-	float: left;
-	margin-right: 1%;
-	width: 24%;
-	}
-
-.col4>div.last {
-	margin-right: 0;
-	width: 25%;
-	}
-
-.col5>div {
-	float: left;
-	margin-right: 1%;
-	width: 19%;
-	}
-
-.col5>div.last {
-	margin-right: 0;
-	width: 20%;
-	}
-
-.grid>div {
-	float: left;
-	}
-
-.grid>.g12 {
-	width: 50%;
-	}
-
-.grid>.g13 {
-	width: 34%;
-	}
-
-.grid>.g23 {
-	width: 66%;
-	}
-
-.grid>.g14 {
-	width: 25%;
-	}
-
-.grid>.g34 {
-	width: 75%;
-	}
-
-.grid>.g15 {
-	width: 20%;
-	}
-
-.grid>.g25 {
-	width: 40%;
-	}
-
-.grid>.g35 {
-	width: 60%;
-	}
-
-.grid>.g45 {
-	width: 80%;
-	}
-
-/* Forms UM-GUI */
-
-.um-form label {
-	text-transform: capitalize;
-	}
-
-.um-form .compact label {
-	display: block;
-	}
-
-.um-form .compact input,
-.um-form .compact select {
-	width: 98%;
-	}
-
-.um-form .line {
-	display: table;
-	width: 99%;
-	}
-
-.um-form .linelabel {
-	display: block;
-	float: left;
-	min-height: 2em;
-	width: 20%;
-	}
-
-.um-form .line input,
-.um-form .line select {
-	width: 78%;
-	}
-
-.um-form .submit label {
-	display: none;
-	}
-
-.um-form .option {
-	font-size: .8em;
-	margin: 0 1%;
-	}
-
-/* Theme HeaderImages */
-
-.um-headimg {
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	-webkit-background-size: cover;
-	background-size: 100% 100%;
-	background-size: cover;
-	}
-
-.navh_added  { font-size: .85em; background: rgba(255,255,255,.05); }
-.navh_added i { padding-right: 1em; }
-
-.docked {
--webkit-box-shadow: 0 8px 8px 8px rgba(0,0,0,.5);
-box-shadow: 0 8px 8px 8px rgba(0,0,0,.5);
-}
-
+.border-box{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+.box{border-style:solid;border-width:1px}
+.full-width{width:100%}
+.full{text-align:center;width:100%}
+.rounded.inside{padding:8px}
+.rounded{border-radius:5px}
+.row:after,.row:before{content:"";display:table}
+.row:after{clear:both}
+.small{font-size:.8em;}
+.micro{font-size:.75em;}
+
+/* off/on canvas with um-gui-lib.js
+ * -----------------------------------------------------------------------------
+ */
+
+.um-dark-overlay{background-color:rgba(0,0,0,.9);height:100%;position:fixed;top:0;width:100%;z-index:990}
+.um-off-canvas-left{left:-24.75%;position:fixed;top:0;width:25%}
+.um-off-canvas-right{left:99%;position:fixed;top:0;width:25%}
+.um-overlay-fx{color:#fff;font-size:1.5em}
+.canvas-adjust-left{-webkit-transition:.5s;margin-left:26% !important;overflow:hidden;transition:.5s}
+.canvas-adjust-right{-webkit-transition:.5s;overflow:hidden;transition:.5s}
+.pined-left,.um-off-canvas-left:hover{left:0;position:fixed;top:0;width:25%}
+.pined-right,.um-off-canvas-right:hover{left:100%;margin-left:-25%;position:fixed;top:0;width:25%}
+
+/* wp themes with um-gui-lib.js
+ * -----------------------------------------------------------------------------
+ */
+
+#um-bottom:after,#um-top:after{clear:both}
+#um-bottom:before,#um-top:before{clear:both}
+
+.um-headimg{-moz-background-size:cover;-o-background-size:cover;-webkit-background-size:cover;background-size:100% 100%;background-size:cover}
+.docked{-webkit-box-shadow:0 2px 7px 1px rgba(0,0,0,.5);box-shadow:0 2px 7px 1px rgba(0,0,0,.5)}
+
+.navh_added i{padding-right:1em}
+.navh_added{font-size:.85em;background:rgba(255,255,255,.05)}
+
+/* breadcrumbs - um-gui-lib.js
+ * -----------------------------------------------------------------------------
+ */
+
+#um-crumbs li:before{content:"\203A";padding:0 .5em 0 .5em}
+#um-crumbs li:first-child:before{content:"\e640";padding:0 0}
+#um-crumbs li{float:left;list-style-type:none}
+
+/* um-login - um-gui-lib.js with ajax-login
+ * -----------------------------------------------------------------------------
+ */
+
+#um-login a.um-badge:hover{color:#fff;text-decoration:none !important}
+#um-login a.um-badge{-webkit-box-shadow:inset 0 1px 1px 1px rgba(255,255,255,.2);background:#111;box-shadow:inset 0 1px 1px 1px rgba(255,255,255,.2);color:#ddd;display:block;display:inline-block;font-size:.75em;opacity:1 !important;text-align:center;text-decoration:none;text-transform:lowercase}
+#um-login h1{font-size:1.5em;font-weight:700;margin-bottom:1.5em}
+#um-login input[type=password],#um-login input[type=text]{width:98%}
+#um-login p label{display:block}
+#um-login p.status{display:none;font-size:.9em}
+#um-login p.submit.label{float:left}
+#um-login p.submit{text-align:right}
+#um-login p{margin-bottom:1em}
+#um-login{background-color:#FFFFFF;display:none;font-size:.9em;left:50%;margin-left:-200px;padding:10px;position:fixed;top:180px;width:350px;z-index:999}
+div.um_login_div a{color:#fff;display:block;font-size:12px;height:24px;line-height:24px;text-decoration:none}
+div.um_login_div{background:#333;height:24px;left:100%;line-height:24px;margin-left:-100px;margin-top:-25px;position:fixed;text-align:center;top:100%;width:80px;z-index:991}
+
+/* um-form - um-gui-lib.js
+ * -----------------------------------------------------------------------------
+ * got to see example for this
+ */
+
+.um-form .compact input,.um-form .compact select{width:98%}
+.um-form .compact label{display:block}
+.um-form .line input,.um-form .line select{width:78%}
+.um-form .linelabel{display:block;float:left;min-height:2em;width:20%}
+.um-form .line{display:table;width:99%}
+.um-form .option{font-size:.8em;margin:0 1%}
+.um-form .submit label{display:none}
+.um-form label{text-transform:capitalize}
+
+/* um_msg and friends - um-gui-lib.js
+ * -----------------------------------------------------------------------------
+ */
+
+.um-msg [class*=" umi-"]:before,.um-msg [class^="umi-"]:before{float:right}
+.um-msg{border-radius:3px;color:#fff;cursor:pointer;font-size:.8em;margin-bottom:.5em;padding:.5% 1%;width:96%}
+
+/* um_toc - um-gui-lib.js
+ * -----------------------------------------------------------------------------
+ */
+
+.um_toc a{color:#333;text-decoration:none}
+.um_toc h5{border-bottom:1px solid #ccc;color:#999;margin:0;margin:0 0 .5em;padding:.5em}
+.um_toc ol{font-size:.8em;line-height:1.5em;margin-left:1.5em;padding:.5em .5em 2em .5em}
+.um_toc{background:#fff;border:1px solid #ccc;color:#999;float:right;width:300px}
+
+/* um_tab - um-gui-lib.js
+ * -----------------------------------------------------------------------------
+ */
+
+#um_tab li a.active{background:#fff;color:#111}
+#um_tab li a:hover{background:#f0f0f0;color:#111}
+#um_tab li a{background:#eee;color:#333;display:block;padding:0;text-align:center;text-decoration:none !important}
+#um_tab li{border-bottom:none;border:1px solid #ccc;float:left;line-height:30px;list-style-type:none;margin-bottom:0;margin-right:2px;min-width:120px}
+#um_tab{border-bottom:1px solid #ccc;display:table;line-height:1.3rem;padding-left:1%;width:99%}
+.um_tab_content.hide{display:none}
+.um_tab_content{background:#fff;border-top:none;border:1px solid #ccc;margin:0;padding:.5em}
+
+/* Layout Grids and collumns 
+ * -----------------------------------------------------------------------------
+*/
+
+.col2>div.last{margin-right:0;width:50%}
+.col2>div{float:left;margin-right:2%;width:48%}
+.col3>div.last{margin-right:0;width:33%}
+.col3>div{float:left;margin-right:2%;width:31%}
+.col4>div.last{margin-right:0;width:25%}
+.col4>div{float:left;margin-right:2%;width:23%}
+.col5>div.last{margin-right:0;width:20%}
+.col5>div{float:left;margin-right:1%;width:19%}
+
+.grid>.g12{width:50%}
+.grid>.g14{width:25%}
+.grid>.g34{width:75%}
+.grid>.g18{width:12.5%}
+.grid>.g38{width:37.5%}
+.grid>.g58{width:62.5%}
+.grid>.g78{width:87.5%}
+.grid>.g15{width:20%}
+.grid>.g25{width:40%}
+.grid>.g35{width:60%}
+.grid>.g45{width:80%}
+.grid>.g13{width:33.33%}
+.grid>.g23{width:66.66%}
+.grid>div{float:left}
+
+/* Debug
+ * -----------------------------------------------------------------------------
+
+.grid>div:hover { background: #ccc; }
+
+#umi-fontest div code{float:right}
+#umi-fontest div{float:left;margin:0 2% 1em 0;width:31%}
+
+*/

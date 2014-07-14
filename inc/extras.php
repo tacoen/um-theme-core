@@ -67,4 +67,3 @@ class fixImageMargins{
     }
 }
 
-$fixImageMargins = new fixImageMargins();

@@ -65,7 +65,10 @@ if ( ! function_exists( 'um_setup' ) ) :
 	add_action( 'widgets_init', 'um_widgets_init' );
 	add_action( 'init', 'um_add_editor_styles' );
 
+	if (get_umcto('fiximgpad')) { $fixImageMargins = new fixImageMargins(); }
+
 	}
+
 endif; // um_setup
 
 add_action( 'after_setup_theme', 'um_setup' );

@@ -10,6 +10,7 @@ function um_child_field_entry() {
 
 	*/
 
+	um_add_field('fiximgpad','No img padding','check','umcto_display_setting','1','Don\'t add extra 10px on every images');
 	um_add_field('hfont','Heading font','text','umcto_display_setting','http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700','Webfonts for entry-title');
 	um_add_field('header_width','Header Image Width','number','umcto_display_setting','1440','in Pixel Preferred');
 	um_add_field('header_height','Header Image Height','number','umcto_display_setting','240','in Pixel Preferred');
@@ -58,8 +59,12 @@ function umcto_display_setting($args) {
 	extract( $args );
 	$option_name = 'umcto';
 	$options = get_option( $option_name ); 
-	if (!empty($options[$id])) { 
-		$options[$id] = esc_attr( stripslashes( $options[$id] ) ); 
+	if (!isset($options[$id])) { 
+		if (!empty($options[$id])) {
+			$options[$id] = esc_attr( stripslashes( $options[$id] ) ); 
+		} else {
+			$options[$id] = 0;
+		}
 	} else { 
 		$options[$id] = $default; 
 	}
@@ -68,7 +73,13 @@ function umcto_display_setting($args) {
 	// http://www.the-art-of-web.com/html/html5-form-validation/	
 	
 	switch ( $type ) { 
- 
+
+	case 'check': 
+		echo "<input class='$class' type='checkbox' id='$id' name='" . $option_name . "[$id]' value='1'";
+		echo ($options[$id] == 1) ? " checked " : ""; 
+		echo "/>"; 
+		echo ($desc != '') ? "<span class='description'>$desc</span>" : ""; 
+		break;
 	case 'text': 
 		echo "<input class='$class' type='text' id='$id' name='" . $option_name . "[$id]' value='$options[$id]' size='60'/>"; 
 		echo ($desc != '') ? "<br /><span class='description'>$desc</span>" : ""; 
