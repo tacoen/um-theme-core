@@ -4,7 +4,7 @@ Theme URI: https://github.com/tacoen/um-theme-core
 Author: tacoen
 Author URI: https://github.com/tacoen/
 Description: UM Core/Starter theme. This theme provide/suggest basic skeleton for scripts and styles(with media queries). Theme options and customization available via UM-Plug Plugins. UM Theme base on _s Wordpress Template(html5, tags, class, and id)
-Version: 1.1.1
+Version: 1.1.2
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: um
@@ -55,23 +55,10 @@ body.single .entry-title {
 	width: 100%;
 }
 
-#um-crumbs li:before {
-	content: "\203A";
-	font-family: "umi-wp-font";
-	padding: 0 .5em 0 .5em;
-	}
-
-#um-crumbs li:first-child:before {
-	content: "\e640";
-	font-family: "umi-wp-font";
-	padding: 0 .5em 0 0;
-	}
-
 #um-crumbs {
 	float: left;
 	margin: 0;
 	padding: 1%;
-	width: 70%;
 	}
 
 #um-site-search .search-field {
@@ -199,5 +186,3 @@ h3.reply-title {
 inside {
 	width: 98%;
 	}
-
-

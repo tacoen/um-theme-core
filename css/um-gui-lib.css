@@ -50,8 +50,8 @@
  * -----------------------------------------------------------------------------
  */
 
-#um-crumbs li:before{content:"\203A";padding:0 .5em 0 .5em}
-#um-crumbs li:first-child:before{content:"\e640";padding:0 0}
+#um-crumbs li:before{content:"\203A";padding:0 .5em 0 .5em;font-family: "umi-wp-font";}
+#um-crumbs li:first-child:before{content:"\e640";	padding: 0 .5em 0 0;font-family: "umi-wp-font";}
 #um-crumbs li{float:left;list-style-type:none}
 
 /* um-login - um-gui-lib.js with ajax-login
