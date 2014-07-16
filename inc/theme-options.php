@@ -1,19 +1,67 @@
 <?php
 
 function um_child_field_entry() {
+/* 
+	syntax format:
 
-	/* Example:
+	um_add_field(
+		array(
+			id => 'id',
+			label => 'label',
+			desc =>	'Descriptions',
+			type => '[check|text|number|select|textarea]',
+			default => '',
+			select_range = > array(1,2,3,4,5,6,7,8);
+			rule => ''
+		)
+	);
+	
+	For html5 validation rule see:
+	http://www.the-art-of-web.com/html/html5-form-validation/	
 
-	um_add_field('text3','Text One','text','umcto_display_setting','nilai default','Sample 3 Description');
-	$text4_range = array(1,2,3,4,5,6,7,8);
-	um_add_field('text4','Text One','select','umcto_display_setting',5,'Ranged',$text4_range);
+*/
+	um_add_field(
+		array(
+			'id' => "fiximgpad",
+			'label' => "No img padding",
+			'type' => "check",
+			'default' => "1",
+			'desc' =>	"Do not add extra 10px on every images",
+		)
+	);
 
-	*/
+	um_add_field(
+		array(
+			'id' => "header_width",
+			'label' => "Header Image Width",
+			'type' => "number",
+			'default' => "1440",
+			'desc' => "Pixel",
+			'rule' => 'min="800" max="2048"'
+		)
+	);
 
-	um_add_field('fiximgpad','No img padding','check','umcto_display_setting','1','Don\'t add extra 10px on every images');
-	um_add_field('hfont','Heading font','text','umcto_display_setting','http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700','Webfonts for entry-title');
-	um_add_field('header_width','Header Image Width','number','umcto_display_setting','1440','in Pixel Preferred');
-	um_add_field('header_height','Header Image Height','number','umcto_display_setting','240','in Pixel Preferred');
+	um_add_field(
+		array(
+			'id' => "header_height",
+			'label' => "Header Image Height",
+			'type' => "number",
+			'default' => "240",
+			'desc' => "Pixel",
+			'rule' => 'min="300" max="128"'
+		)
+	);	
+	
+	um_add_field(
+		array(
+			'id' => "hfont",
+			'label' => "Font for Heading",
+			'type' => "text",
+			'default' => 'http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700',
+			'desc' => "Webfonts for entry-title",
+			'rule' => 'pattern="https?://.+"'
+		)
+	);
 	
 }
 
@@ -33,23 +81,29 @@ function um_child_register_settings() {
 	um_child_field_entry();
 }
 
-function um_add_field($id,$title,$type,$callback,$default='',$desc='',$range=array()) {
-	$hint = "<br/><code>$id</code>";
+function um_add_field($af) {
+	$hint = "<br/><code>".$af['id']."</code>";
+	if (!isset($af['select_range'])) { $af['select_range'] =''; } 
+	if (!isset($af['rule'])) { $af['rule'] =''; }
+	if (!isset($af['desc'])) { $af['desc'] =''; }
+	if (!isset($af['default'])) { $af['default'] =''; }
+	
 	add_settings_field( 
-		$id, 
-		$title.$hint, 
-		$callback,
+		$af['id'], 
+		$af['label'].$hint, 
+		'umcto_display_setting',
 		'umcto.php', 
 		'um_child_section', 
 		array(
-			'type' => $type,
-			'id' => $id,
-			'name' => $id,
-			'desc' => $desc,
-			'default' => $default,
-			'label_for' => $id.'_label',
-			'class' => $id.'_class',
-			'range' => $range,
+			'type' => $af['type'],
+			'id' => $af['id'],
+			'name' => $af['id'],
+			'desc' => $af['desc'],
+			'default' => $af['default'],
+			'label_for' => $af['id'].'_label',
+			'class' => $af['id'].'_class',
+			'range' => $af['select_range'],
+			'rule' => $af['rule']
 		));
 }
 
@@ -69,9 +123,6 @@ function umcto_display_setting($args) {
 		$options[$id] = $default; 
 	}
 	
-	// default, cause html5 build with validations
-	// http://www.the-art-of-web.com/html/html5-form-validation/	
-	
 	switch ( $type ) { 
 
 	case 'check': 
@@ -81,12 +132,12 @@ function umcto_display_setting($args) {
 		echo ($desc != '') ? "<span class='description'>$desc</span>" : ""; 
 		break;
 	case 'text': 
-		echo "<input class='$class' type='text' id='$id' name='" . $option_name . "[$id]' value='$options[$id]' size='60'/>"; 
+		echo "<input class='$class' type='text' id='$id' name='" . $option_name . "[$id]' value='$options[$id]' size='60' $rule />"; 
 		echo ($desc != '') ? "<br /><span class='description'>$desc</span>" : ""; 
 		break;
 	case 'number': 
-		echo "<input class='$class' type='number' id='$id' name='" . $option_name . "[$id]' min='0' value='$options[$id]' size='4'/>"; 
-		echo ($desc != '') ? "<br /><span class='description'>$desc</span>" : ""; 
+		echo "<input class='$class' type='number' id='$id' name='" . $option_name . "[$id]' value='$options[$id]' size='4' $rule />"; 
+		echo ($desc != '') ? "<span class='description'> $desc</span>" : ""; 
 		break;
 	case 'textarea': 
 		echo ($desc != '') ? "<span class='description'>$desc</span><br />" : "";
