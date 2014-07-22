@@ -55,4 +55,3 @@ Fonts where derived from:
 
  * UM-Plug Wordpress Plugins(https://github.com/tacoen/um-plug)
  * Developer tips and tricks where organized at https://github.com/tacoen/um-theme-core/wiki
->>>>>>> origin/master
