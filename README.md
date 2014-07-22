@@ -48,3 +48,9 @@ Fonts where derived from:
  * Entypo
    * http://www.entypo.com/
    * CC BY-SA 3.0
+
+### etc
+
+ * UM-Plug Wordpress Plugins(https://github.com/tacoen/um-plug)
+ * Developer tips and tricks where organized at https://github.com/tacoen/um-theme-core/wiki
+
