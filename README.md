@@ -16,10 +16,23 @@ You should have received a copy of the GNU General Public License along with thi
 
 ## Derived
 
+### Underscores
+
 UM WordPress Theme is derived from Underscores WordPress Theme, Copyright 2013 Automattic, Inc.
 Underscores WordPress Theme is distributed under the terms of the GNU GPL
 
-UM WordPress Theme bundles with Icon font which compiled at http://http://icomoon.io/ then packed as umi-wp-font,
+#### Styles (CSS)
+
+ * reset.css, HTML5 Reset.css derived from:
+   * Eric Meyer's reset.css - http://meyerweb.com/eric/tools/css/reset/index.html
+   * HTML5 Doctor - http://html5doctor.com
+   * HTML5 Boilerplate - http://html5boilerplate.com
+ * base.css and nav.css
+   * Derived from Underscores Theme - http://underscores.me, used as the standard Wordpress Styles 
+
+### Icons fonts
+
+UM WordPress Theme bundles with Icons font which compiled at http://http://icomoon.io/ then packed as umi-wp-font,
 Fonts where derived from:
 
  * IcoMoon
