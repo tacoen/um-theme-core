@@ -5,42 +5,46 @@
  *
 **/
 
-.um-confirm { color: #16A086/*um-confirm*/ ; }
-.um-cool { color: #5DADE2/*um-cool*/ ; }
-.um-hot { color: #C54134/*um-hot*/ ; }
-.um-line { color: #95A5A6/*um-line*/ ; }
-.um-link { color: #111111/*um-link*/ ; }
-.um-page { color: #FCFCFC/*um-page*/ ; }
-.um-prompt { color: #F39C11/*um-prompt*/ ; }
-.um-text { color: #232d1b/*um-text*/ ; }
-.um-title { color: #2D3E50/*um-title*/ ; }
+#whats-new-form p.activity-greeting,
+#item-header h2,
+.um-confirm { color: #16a086/*um-confirm*/ ; }
 
-.um-bgr_confirm { background-color: #16A086/*um-confirm*/ ; }
+.um-cool { color: #5DADE2/*um-cool*/ ; }
+.um-hot { color: #c54134/*um-hot*/ ; }
+.um-line { color: #95a5a6/*um-line*/ ; }
+.um-link { color: #111111/*um-link*/ ; }
+.um-page { color: #fcfcfc/*um-page*/ ; }
+.um-prompt { color: #f39c11/*um-prompt*/ ; }
+.um-text { color: #5d6d7d/*um-text*/ ; }
+.um-title { color: #2d3e50/*um-title*/ ; }
+
+.um-bgr_confirm { background-color: #16a086/*um-confirm*/ ; }
 .um-bgr_cool { background-color: #5DADE2/*um-cool*/ ; }
-.um-bgr_hot { background-color: #C54134/*um-hot*/ ; }
-.um-bgr_line { background-color: #95A5A6/*um-line*/ ; }
+.um-bgr_hot { background-color: #c54134/*um-hot*/ ; }
+.um-bgr_line { background-color: #95a5a6/*um-line*/ ; }
 .um-bgr_link { background-color: #111111/*um-link*/ ; }
-.um-bgr_page { background-color: #FCFCFC/*um-page*/ ; }
-.um-bgr_prompt { background-color: #F39C11/*um-prompt*/ ; }
-.um-bgr_text { background-color: #232d1b/*um-text*/ ; }
-.um-bgr_title { background-color: #2D3E50/*um-title*/ ; }
+.um-bgr_page { background-color: #fcfcfc/*um-page*/ ; }
+.um-bgr_prompt { background-color: #f39c11/*um-prompt*/ ; }
+.um-bgr_text { background-color: #5d6d7d/*um-text*/ ; }
+.um-bgr_title { background-color: #2d3e50/*um-title*/ ; }
 
 * { 
-	border-color: #95A5A6/*um-line*/ ; 
+	border-color: #95a5a6/*um-line*/ ; 
 }
 
-.entry-meta * { color: #95A5A6/*um-line*/ }
+.entry-meta * { color: #95a5a6/*um-line*/ }
 
 body { 
-	background-color: #FCFCFC/*um-page*/ ; 
-	color: #232d1b/*um-text*/ ; 
+	background-color: #fffff ; 
+	color: #5d6d7d/*um-text*/ ; 
 }
+
 
 a { color: #111111/*um-link*/ }
 
 input[type=submit],
 .button { 
-	background-color: #F39C11/*um-prompt*/ ; 
+	background-color: #f39c11/*um-prompt*/ ; 
 }
 
 .entry-title ,
@@ -55,24 +59,24 @@ input[type=submit],
 #reply-title,
 .comments-title,
 .widget-title {
-	color: #C54134/*um-hot*/ ; 
+	color: #c54134/*um-hot*/ ; 
 }
 
 
 #um-top.docked ,
 .site-header {
-	background-color: #232d1b/*um-text*/;
-	color: #FCFCFC/*um-page*/ 
+	background-color: #5d6d7d/*um-text*/;
+	color: #fcfcfc/*um-page*/ 
 }
 
 .main-navigation *,
 .site-header *, 
 .site-footer *,
-#um-top * { 	color: #FCFCFC/*um-page*/; }
+#um-top * { 	color: #fcfcfc/*um-page*/; }
 
 .main-navigation,
 .main-navigation .nav-menu,
-.nav-menu ul { background-color: #16A086/*um-confirm*/ }
+.nav-menu ul { background-color: #16a086/*um-confirm*/ }
 
-.site-footer { background-color: #95A5A6/*um-line*/ }
+.site-footer { background-color: #95a5a6/*um-line*/ }
 
