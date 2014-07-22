@@ -14,21 +14,25 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 You should have received a copy of the GNU General Public License along with this program(LICENSE.txt). If not, see http://www.gnu.org/licenses/
 
+## UM-GUI
+
+UM-GUI is collections of javascripts(jQuery) and CSS3 to make this theme standouts and easy-to develope. Functions is inherited from the UM-PLUG Plugins(//github.com/tacoen/um-plug).
+
 ## Derived
 
 ### Underscores
 
-UM WordPress Theme is derived from Underscores WordPress Theme, Copyright 2013 Automattic, Inc.
+UM WordPress Theme is derived from Underscores(http://underscores.me) WordPress Theme, Copyright 2013 Automattic, Inc.
 Underscores WordPress Theme is distributed under the terms of the GNU GPL
 
-#### Styles (CSS)
+### Basic Styles (CSS)
 
  * reset.css, HTML5 Reset.css derived from:
    * Eric Meyer's reset.css - http://meyerweb.com/eric/tools/css/reset/index.html
    * HTML5 Doctor - http://html5doctor.com
    * HTML5 Boilerplate - http://html5boilerplate.com
  * base.css and nav.css
-   * Derived from Underscores Theme - http://underscores.me, used as the standard Wordpress Styles 
+   * Derived from Underscores Theme, used as the standard Wordpress Styles 
 
 ### Icons fonts
 
