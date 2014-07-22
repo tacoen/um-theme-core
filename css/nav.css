@@ -3,27 +3,27 @@
  * 
 **/
 
-.main-navigation   { position: fixed; z-index: 9990; width: 100%; box-shadow:0 1px 3px rgba(0,0,0,0.2); }	
+.main-navigation { position: fixed; z-index: 9990; width: 100%; box-shadow:0 1px 3px rgba(0,0,0,0.2); }	
 body .main-navigation { top: 0 }
-body.admin-bar .main-navigation   { top: 32px; }
-body.admin-bar.vp_medium .main-navigation  { top: 46px; }
-body.admin-bar.vp_small .main-navigation  { top: 46px; }
+body.admin-bar .main-navigation { top: 32px; }
+body.admin-bar.vp_medium .main-navigation { top: 46px; }
+body.admin-bar.vp_small .main-navigation { top: 46px; }
 
 .main-navigation .menu-toggle i {
 	cursor: pointer; 
 	font-weight: normal; font-size: 1em; width: 1em; padding: .25rem; margin-right: 8px;
-	float: right; border-left: 1px solid rgba(255,255,255,.5);  
+	float: right; border-left: 1px solid rgba(255,255,255,.5); 
 	opacity: .6;	
 }
 
-.main-navigation .menu-toggle span { font-size:1em; padding: .25rem; display: inline-block;  }
-.main-navigation .menu-toggle  { background: rgba(0,0,0,.5); font-weight: normal }
+.main-navigation .menu-toggle span { font-size:1em; padding: .25rem; display: inline-block; }
+.main-navigation .menu-toggle { background: rgba(0,0,0,.5); font-weight: normal }
 .main-navigation .menu { background: #f00; display: block; }
 .main-navigation .menu ul.nav-menu:after { clear: both; content: "\0020"; display: block; overflow: hidden; }
 
-.main-navigation .menu a { font-size: 1em; padding: .25rem; display: block;  text-decoration: none; }
+.main-navigation .menu a { font-size: 1em; padding: .25rem; display: block; text-decoration: none; }
 .main-navigation .menu li { min-width: 140px; float: left; position:relative; display: block; }
-.main-navigation ul { display:block; margin:0; padding:0;  }
+.main-navigation ul { display:block; margin:0; padding:0; }
 .main-navigation li ul { display:none; float:left; left:0; position:absolute; box-shadow:0 1px 3px rgba(0,0,0,0.2); }
 .main-navigation li:hover > ul { display: block; z-index:9991; }
 .main-navigation a:hover { background: rgba(255,255,255,0.1)}
@@ -41,7 +41,7 @@ body.vp_medium .main-navigation li:hover.clicked > ul ,
 body.vp_medium .main-navigation li.clicked > ul { display: block; z-index:9991; }
 
 
-/* hide menu-toggle - media query  */
+/* hide menu-toggle - media query */
 
 #site-navigation .menu-toggle,
 #site-navigation.nav-menu { display: none; height:0 }
@@ -77,7 +77,7 @@ transition: height 500ms linear;
 
 .main-navigation .menu-item a[href="#logout"]:before{ 
 	font-family: "umi-wp-font";
-	content: " \e63a";  padding: .25rem;
+	content: " \e63a"; padding: .25rem;
 	vertical-align: top	
 }
 

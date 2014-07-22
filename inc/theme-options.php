@@ -48,7 +48,7 @@ function um_child_field_entry() {
 			'type' => "number",
 			'default' => "240",
 			'desc' => "Pixel",
-			'rule' => 'min="300" max="128"'
+			'rule' => 'min="128" max="300"'
 		)
 	);	
 	
@@ -57,7 +57,7 @@ function um_child_field_entry() {
 			'id' => "hfont",
 			'label' => "Font for Heading",
 			'type' => "text",
-			'default' => 'http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700',
+			'default' => 'http://fonts.googleapis.com/css?family=Fira+Sans:300,400,700',
 			'desc' => "Webfonts for entry-title",
 			'rule' => 'pattern="https?://.+"'
 		)
@@ -69,7 +69,8 @@ function get_umcto($id) {
 	$option_name = 'umcto';
 	$options = get_option( $option_name );
 	if (!empty($options[$id])) {
-		$options[$id] = esc_attr( stripslashes( $options[$id] ) ); return $options[$id]; 
+		$options[$id] = esc_attr( stripslashes( $options[$id] ) );
+		return $options[$id]; 
 	} else { 
 		return false; 
 	}
@@ -83,6 +84,7 @@ function um_child_register_settings() {
 
 function um_add_field($af) {
 	$hint = "<br/><code>".$af['id']."</code>";
+	
 	if (!isset($af['select_range'])) { $af['select_range'] =''; } 
 	if (!isset($af['rule'])) { $af['rule'] =''; }
 	if (!isset($af['desc'])) { $af['desc'] =''; }
@@ -112,42 +114,33 @@ function umcto_display_section($section){ echo "<hr/>"; }
 function umcto_display_setting($args) {
 	extract( $args );
 	$option_name = 'umcto';
-	$options = get_option( $option_name ); 
-	if (!isset($options[$id])) { 
-		if (!empty($options[$id])) {
-			$options[$id] = esc_attr( stripslashes( $options[$id] ) ); 
-		} else {
-			$options[$id] = 0;
-		}
-	} else { 
-		$options[$id] = $default; 
-	}
+	$value = get_umcto($id); if ($value==false) { $value = $default; }
 	
 	switch ( $type ) { 
 
 	case 'check': 
 		echo "<input class='$class' type='checkbox' id='$id' name='" . $option_name . "[$id]' value='1'";
-		echo ($options[$id] == 1) ? " checked " : ""; 
+		echo ($value == 1) ? " checked " : ""; 
 		echo "/>"; 
 		echo ($desc != '') ? "<span class='description'>$desc</span>" : ""; 
 		break;
 	case 'text': 
-		echo "<input class='$class' type='text' id='$id' name='" . $option_name . "[$id]' value='$options[$id]' size='60' $rule />"; 
+		echo "<input class='$class' type='text' id='$id' name='" . $option_name . "[$id]' value='$value' size='60' $rule />"; 
 		echo ($desc != '') ? "<br /><span class='description'>$desc</span>" : ""; 
 		break;
 	case 'number': 
-		echo "<input class='$class' type='number' id='$id' name='" . $option_name . "[$id]' value='$options[$id]' size='4' $rule />"; 
+		echo "<input class='$class' type='number' id='$id' name='" . $option_name . "[$id]' value='$value' size='4' $rule />"; 
 		echo ($desc != '') ? "<span class='description'> $desc</span>" : ""; 
 		break;
 	case 'textarea': 
 		echo ($desc != '') ? "<span class='description'>$desc</span><br />" : "";
-		echo "<textarea cols='60' rows='5' class='$class full' id='$id' name='" . $option_name . "[$id]'>".$options[$id]."</textarea>"; 
+		echo "<textarea cols='60' rows='5' class='$class full' id='$id' name='" . $option_name . "[$id]'>".$value."</textarea>"; 
 		break;
 	case 'select': 
 		echo ($desc != '') ? "<span class='description'>$desc</span><br />" : "";
 		echo "<select class='$class' id='$id' name='" . $option_name . "[$id]'>";
 			 foreach ($range as $opt) {
-				if ( $opt == $options[$id]) { $selected = "selected"; } else { $selected =""; }
+				if ( $opt == $value) { $selected = "selected"; } else { $selected =""; }
 				echo "<option value='$opt' $selected>$opt</option>";
 			 }
 		echo "</select>";
@@ -166,7 +159,7 @@ function um_child_validate_settings($input) {
 }
 
 function um_themename() {
-	if (strlen(get_stylesheet())>3) { 
+	if (strlen(get_stylesheet())>5) { 
 		$nice_name = ucfirst(get_stylesheet()); 
 	} else { 
 		$nice_name = strtoupper(get_stylesheet()); 
@@ -197,5 +190,3 @@ function um_child_theme_page() {?>
 }
 
 add_action( 'admin_init', 'um_child_register_settings' );
-
-?>

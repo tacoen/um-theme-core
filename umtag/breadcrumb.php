@@ -9,15 +9,16 @@ function umtag_breadcrumb() { um_breadcrumb_script(); }
 
 function um_li_catagory($num){
 	$cat_string ="";
-    $temp=get_the_category();
-    $count=count($temp);// Getting the total number of categories the post is filed in.
-    for($i=0;$i<$num&&$i<$count;$i++){
-        $cat_string.='<li><a href="'.get_category_link( $temp[$i]->cat_ID  ).'">'.$temp[$i]->cat_name.'</a></li>';
-        //if($i!=$num-1&&$i+1<$count)
-        //$cat_string.="</li>";
-    }
-    echo $cat_string;
+	$temp=get_the_category();
+	$count=count($temp);// Getting the total number of categories the post is filed in.
+	for($i=0;$i<$num&&$i<$count;$i++){
+		$cat_string.='<li><a href="'.get_category_link( $temp[$i]->cat_ID ).'">'.$temp[$i]->cat_name.'</a></li>';
+		//if($i!=$num-1&&$i+1<$count)
+		//$cat_string.="</li>";
+	}
+	echo $cat_string;
 }
+
 function um_bc_root() {
 	if (is_front_page()!=is_home()) {
 		echo "<li><a href='".home_url()."'>";
@@ -30,17 +31,17 @@ function um_bc_root() {
 }
 
 function is_subpage() {
-    global $post;    
-    if ( is_page() && $post->post_parent ) {  
-        return $post->post_parent;          
-    } else {                              
-        return false;                          
-    }
+	global $post; 
+	if ( is_page() && $post->post_parent ) { 
+		return $post->post_parent; 
+	} else { 
+		return false; 
+	}
 }
 
 
 function um_breadcrumb_script() {
-	$n = 0; $date_format =  get_option( 'date_format' );
+	$n = 0; $date_format = get_option( 'date_format' );
 	global $post; 
 	echo "<ul id='um-crumbs' class='small'>";
 

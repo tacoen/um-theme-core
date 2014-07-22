@@ -15,7 +15,7 @@
 var window_height = jQuery(window).innerHeight();
 
 function um_fx_init() {
-	var cl=  um_getrgbof($('.site-footer'),'background-color','.2')
+	var cl= um_getrgbof($('.site-footer'),'background-color','.2')
 	$('.widget-area aside').css('background-color',cl);
 	$('.widget-area aside h1').css('background-color',cl);
 

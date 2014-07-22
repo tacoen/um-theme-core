@@ -19,7 +19,7 @@ if (!empty($curauth->user_url)) {
 }
 if (!empty($curauth->user_url)) { echo "<p><i class='umi-earth'></i><a href='". $curauth->user_url . "'>". $curauth->user_url ."</a></p>\n"; }
 if (!empty($curauth->facebook)) { echo "<p><i class='umi-facebook'></i><a href='". $curauth->facebook . "'>". $curauth->facebook ."</a></p>\n"; }
-if (!empty($curauth->twitter))  { echo "<p><i class='umi-twitter'></i><a href='". $curauth->twitter  . "'>". $curauth->twitter ."</a></p>\n"; }
+if (!empty($curauth->twitter)) { echo "<p><i class='umi-twitter'></i><a href='". $curauth->twitter . "'>". $curauth->twitter ."</a></p>\n"; }
 
 echo "</div><!-- eo profile -->\n";
 

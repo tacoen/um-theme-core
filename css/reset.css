@@ -36,7 +36,7 @@ embed {max-width: 100%;}
 html {
 	overflow-y: scroll; /* force a vertical scrollbar to prevent a jumpy page */
 	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
-	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
 
 /* we use a lot of ULs that aren't bulleted.
@@ -55,7 +55,7 @@ a {margin: 0; padding: 0; font-size: 100%; background: transparent; vertical-ali
 
 del {text-decoration: line-through;}
 
-abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+acronym[title], abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
 
 /* tables still need cellspacing="0" in the markup */
 
@@ -92,8 +92,8 @@ td, td img {vertical-align: top;}
 /* Make sure sup and sub don't screw with your line-heights
 gist.github.com/413930 */
 sub, sup {font-size: 65%; line-height: 0; position: relative;}
-sup {top: -.2em;}
-sub {bottom: -.2em;}
+sup {top: -.1em;}
+sub {bottom: 0;}
 
 /* standardize any monospaced elements */
 pre, code, kbd, samp {font-family: monospace, sans-serif;}
@@ -128,3 +128,10 @@ input[type=button] {width: auto; overflow: visible;}
 
 .clear:before, .clear:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
 .clear:after { clear: both; }
+
+h1,h2,h3,h4,h5,h6 {
+-webkit-margin-before: 0;
+-webkit-margin-after:0;
+-webkit-margin-start: 0;
+-webkit-margin-end: 0;
+}

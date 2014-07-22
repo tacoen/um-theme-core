@@ -11,6 +11,11 @@
  
 .border-box{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 .box{border-style:solid;border-width:1px}
+.pad5 { padding: 5px; }
+.pad8 { padding: 8px; }
+.mar5 { margin-right: 5px; }
+.mar8 { margin-right: 8px; }
+.break div { margin-bottom: 1em; }
 .full-width{width:100%}
 .full{text-align:center;width:100%}
 .rounded.inside{padding:8px}
@@ -45,6 +50,8 @@
 
 .navh_added i{padding-right:1em}
 .navh_added{font-size:.85em;background:rgba(255,255,255,.05)}
+
+meta-nav { font-family: "umi-font"; }
 
 /* breadcrumbs - um-gui-lib.js
  * -----------------------------------------------------------------------------
@@ -126,9 +133,11 @@ div.um_login_div{background:#333;height:24px;left:100%;line-height:24px;margin-l
 .col5>div.last{margin-right:0;width:20%}
 .col5>div{float:left;margin-right:1%;width:19%}
 
-.grid>.g12{width:50%}
+div[class*="col"]>div>*:first-child { margin-top: 0 }
+
+.grid>.g24,.grid>.g12{width:50%}
 .grid>.g14{width:25%}
-.grid>.g34{width:75%}
+.grid>.g68,.grid>.g34{width:75%}
 .grid>.g18{width:12.5%}
 .grid>.g38{width:37.5%}
 .grid>.g58{width:62.5%}

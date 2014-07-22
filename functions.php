@@ -65,7 +65,7 @@ if ( ! function_exists( 'um_setup' ) ) :
 	add_action( 'widgets_init', 'um_widgets_init' );
 	add_action( 'init', 'um_add_editor_styles' );
 
-	if (get_umcto('fiximgpad')) { $fixImageMargins = new fixImageMargins(); }
+	if (get_umcto('fiximgpad')) { $um_fixImageMargins = new um_fixImageMargins(); }
 
 	}
 
@@ -105,7 +105,6 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 
 um_which_php('/inc/theme-options.php');
-
 um_which_php('/inc/customizer.php');
 um_which_php('/inc/template-tags.php');
 um_which_php('/inc/commenting.php');

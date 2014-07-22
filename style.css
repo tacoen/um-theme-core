@@ -3,8 +3,8 @@ Theme Name: UM
 Theme URI: https://github.com/tacoen/um-theme-core
 Author: tacoen
 Author URI: https://github.com/tacoen/
-Description: UM Core/Starter theme. This theme provide/suggest basic skeleton for scripts and styles(with media queries). Theme options and customization available via UM-Plug Plugins. UM Theme base on _s Wordpress Template(html5, tags, class, and id)
-Version: 1.1.2
+Description: UM Core/Starter theme. This theme provide/suggest basic skeleton for scripts and styles(with media queries). Theme Tweaks, customization and more options available via UM-Plug Plugins. UM Theme base on _s Wordpress Template(html5, tags, class, and id)
+Version: 1.1.3.1
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: um
@@ -162,7 +162,7 @@ body.single .entry-title {
 	-webkit-border-radius: 0 0 5px 5px;
 	border-radius: 0 0 5px 5px;
 	font-size: .9em;
-	padding: .5em;
+	padding: .5em .5em 1em .5em;
 	}
 
 .widget-area aside {
@@ -179,10 +179,17 @@ body.single .entry-title {
 	}
 
 h2.comments-title,
-h3.reply-title {
+#reply-title {
 	font-size: 1em;
 	}
 
 inside {
 	width: 98%;
 	}
+
+aside .widget-title,
+.page-title,
+body.page .entry-title,
+body.single .entry-title {
+	font-family: "Fira Sans",arial,helv,sans-serif;
+}
