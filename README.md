@@ -16,7 +16,7 @@ You should have received a copy of the GNU General Public License along with thi
 
 ## UM-GUI
 
-UM-GUI is collections of javascripts(jQuery) and CSS3 to make this theme standouts and easy-to develope. Functions is inherited from the UM-PLUG Plugins(//github.com/tacoen/um-plug).
+UM-GUI is collections of javascripts(jQuery) and CSS3 to make this theme standouts and easy-to develope. Functions is inherited from the UM-PLUG Plugins(https://github.com/tacoen/um-plug).
 
 ## Derived
 
