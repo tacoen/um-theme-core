@@ -53,7 +53,7 @@ code,kbd,pre,textarea,tt{font:.9375em Monaco,Consolas,"Andale Mono","DejaVu Sans
 li.comment{position:relative}
 
 pre code{display:block}
-pre,textarea{display:block;min-height:10em;min-width:98%;vertical-align:top}
+pre,textarea{display:block;min-height:10em;vertical-align:top}
 pre{border-style:solid;border-width:1px;padding:.5rem}
 select{-moz-appearance:menulist;-moz-box-sizing:content-box;-webkit-appearance:menulist;appearance:menulist;border-style:solid;border-width:1px;box-sizing:content-box;font-size:.95em;padding:.1em .3em}
 table{margin-bottom:1em}
@@ -84,20 +84,20 @@ tr th{background:rgba(0,0,0,.05)}
 .comment-form label{display:block}
 .comment-form p.form-allowed-tags{font-size:.85em}
 .comment-form{width:100%}
-.comment-list .children li.comment .reply{margin-right:0;top:0}
-.comment-list .children{border-style:solid;border-width:1px;margin-left:42px;padding-top:.5em}
-.comment-list .depth-1{border-radius:3px;border-style:solid;border-width:1px;margin:.5em 0;padding:.3em}
+.comment-list .children li.comment .reply{margin: .3em;font-size: .8em;top:0}
+.comment-list .children{/* border-style:solid; *//* border-width:1px; *//* margin-left:42px; *//* padding-top:.5em */}
+.comment-list .depth-1{border-radius:3px;border-style:solid;border-width:1px;margin:.5em 0;/* padding:.3em */}
 .comment-list .parent article{margin-bottom:.5em}
 .comment-list li.comment .reply{margin-right:.3em;position:absolute;right:0;top:.3em}
-.comment-list>li.comment:hover{background:rgba(0,0,0,.02)}
+.comment-list>li.comment:hover{/* background:rgba(0,0,0,.02) */}
 .comment-list{margin:0;padding-left:1.5em}
 .comment-meta,.comments-area .reply,article .entry-meta,div.nav-links{font-size:.9em}
 .comment-metadata{font-size:.8em}
 .comments-area .comments-title{margin-bottom:1em}
 .comments-area div:not(.comment-content)dd,.comments-area div:not(.comment-content)ol,.comments-area div:not(.comment-content)ul{margin-left:2em}
 .comments-area div:not(.comment-content)p{margin:1em 0}
-.comments-area ol{margin-left:0}
-
+.comments-area ol{margin-right: 0;padding: 0;list-style-type: none;}
+.comments-area .children { padding: 0 0 0 2em; }
 .entry-content blockquote cite{float:right;font-size:.8em; opacity: .8}
 .entry-content blockquote p{margin:0;padding:0}
 .entry-content blockquote,q{font-family:"Georgia","Times New Roman",times,serif}
@@ -157,3 +157,4 @@ tr th{background:rgba(0,0,0,.05)}
 .entry-content dl {margin: 0 3em 1em 1.5em; }
 .entry-content dt {font-weight: 700; }
 .entry-content dd {margin-left: 0; margin-bottom: 1em; }
+
